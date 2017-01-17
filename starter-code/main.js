@@ -1,10 +1,9 @@
-console.log("JS file is connected to HTML! Woo!")
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour = "king";
-if (cardOne===cardThree){
-	alert('You found a match!');
-} else {
-	alert('Sorry, try again.');
+var createCards = function(cardOne,cardTwo,cardThree,cardFour){
+	var gameboard = document.getElementById('game-board');
+	for (var i=1; i<=4; i++){
+		var newCard = document.createElement('div');
+		newCard.className = 'card';
+		gameboard.appendChild(newCard);
+	}
 }
+createCards('queen','queen','king','king')
